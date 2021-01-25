@@ -8,7 +8,7 @@ if (!message.guild) {
     .setAuthor(message.author.username, message.author.avatarURL)
     .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
     return message.author.send(ozelmesajuyari); }
-const EmbedCrewCode = new Discord.MessageEmbed()
+const NARCOSEMBED = new Discord.MessageEmbed()
 
 .setColor("RANDOM")
 .setTitle("**  » CAPTAN Bot  **")
@@ -38,18 +38,11 @@ Bir komut hakkında detaylı __yardım için__: **-yardım**
 > [-üyedurum](https://discord.gg/qzHTkhjQgT) →  Sunucu üyeleri hakkında bilgi verir
 > [-çekiliş](https://discord.gg/qzHTkhjQgT) → Çekiliş yaparsınız.
 
-
-**• Bilgilendirme**
-
-> :bulb: **Discord Js Sürümü : 12.5.0**
-> :robot: **Yapımcım : Manyak*#9999**
-> :eye_in_speech_bubble: **Sürümüm : 2.0.1**
-© 2020 Captan | Tüm hakları saklıdır.
 `)
  
  
 
-return message.channel.send(EmbedCrewCode)
+return message.channel.send(NARCOSEMBED)
 .then; 
 
 };

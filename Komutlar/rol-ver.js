@@ -50,7 +50,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [""],
+  aliases: [],
   permLevel: 5
 };
  //Crew Code

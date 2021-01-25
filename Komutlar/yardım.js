@@ -1,43 +1,42 @@
-const Discord = require('discord.js');
+const Discord = require ("discord.js");
 
-exports.run = function(client, message) {
-const embed = new Discord.MessageEmbed()
-.setColor('RANDOM')
-.setTitle('» Narcos BOT Komut Sistemleri')
-.setTimestamp()
-.addField('» !adamol', 'adam olursun')
-.addField('» !ağla', 'Botu ağlatırsın')
-.addField('» !atatürk', 'Atatürkün fotorafını atar')
-.addField('» !hapishane', 'hapse girersin')
-.addField('» !havadurumu', 'Havadurumunu gösterir')
-.addField('» !hediye-ver', 'hediye verirsin')
-.addField('» !ilginçbilgi', 'İlginç bilgi verir')
-.addField('» !intihar-et', ' intihar edersin')
-.addField('» !kahve', 'kahve içersin')
-.addField('» !polisiara', 'polisi ararsın')
-.addField('» !renkara', 'renk ararsın')
-.addField('» !şanslısayım', 'şanslı sayını tahmin eder')
-.addField('» !songörülme', 'etiketledin kişinin son mesaj tarihini söyler')
-.addField('» !sorusor', 'bota istedin soruyu sorarsın')
-.addField('» !taksimdayı', 'taksim dayının fotosunu atar')
-.addField('» !tersyaz', 'yazdın yazıyı ters yazar')
-.addField('» !yazı-yaz', 'bota yazı yazdırırsın')
-.addField('» !zarat', 'zar atarsın')
-.setFooter('© 2020 Narcos Bot', client.user.avatarURL())
-.setTimestamp()
-.setThumbnail(client.user.avatarURL())
-message.channel.send(embed)
+exports.run = (client, message) => {
+    if (!message.guild) {
+    const ozelmesajuyari = new Discord.MessageEmbed()
+    .setColor(0xFF0000)
+    .setTimestamp()
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
+    return message.author.send(ozelmesajuyari); }
+const NARCOSEMBED = new Discord.MessageEmbed()
+
+.setColor("RANDOM")
+.setTitle("**  » CAPTAN Bot  **")
+.setThumbnail("https://cdn.discordapp.com/emojis/770265448892858368.gif?v=1")
+.setDescription(`
+**» Bağlantılar** 
+**[Destek Sunucusu](https://discord.gg/qzHTkhjQgT)** **•** **[Botun Davet Linki](https://discord.com/api/oauth2/authorize?client_id=779006421625995345&permissions=2146958847&scope=bot)** **•** **[Web-Site]()**
+Bir komut hakkında detaylı __yardım için__: **-yardım**`)
+
+.addField('**• Komutlar**')
+.addField('> -kullanıcı ',' Kullanıcı komutları')
+.addField('> -moderasyon ',' → Moderasyon komutları')
+.addField('> -aboneyardım ',' → Ayarlamalı Abone Rol Sistemi')
+.addField('> -eğlence','  → Eğlence Komutları')
+.addField('> -logo ',' → Logo Komutları')
+return message.channel.send(NARCOSEMBED)
+.then; 
+
 };
-
 exports.conf = {
-  enabled: true,
-  guildOnly: false, 
-  aliases: [], 
-  permLevel: 0 
+    enabled: true, 
+    guildOnly: false, 
+    aliases: [], 
+    permLevel: 0 
 };
-
-exports.help = {
-  name: 'yardım',
-  description: 'Tüm komutları gösterir.',
-  usage: 'yardım'
+  
+  exports.help = {
+    name: 'yardım', 
+    description: 'Botun Komut Listesini Gösterir!',
+    usage: '-eğlence'
 };

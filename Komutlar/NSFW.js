@@ -3,7 +3,7 @@ const Discord = require ("discord.js");
 exports.run = (client, message) => {
     if (!message.guild) {
     const ozelmesajuyari = new Discord.MessageEmbed()
-    .setColor(0xFF0000)
+    .setColor(0xFF0000) //komutu alıp asıl botunuza atabilirsiniz
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
     .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
