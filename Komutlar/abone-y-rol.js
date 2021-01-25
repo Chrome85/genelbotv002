@@ -1,7 +1,7 @@
 let database = require("wio.db")
 let ayarlar = require("../ayarlar.json")
 
-
+ //komutu alıp asıl botunuza atabilirsiniz
 
 exports.run = async(client, message) => {
   if(!message.member.hasPermission(`ADMINISTRATOR`)) return message.channel.send(`Bu komutu kullanabilmek için gerekli yetkiye sahip değilsin.`)
@@ -13,7 +13,7 @@ exports.run = async(client, message) => {
   database.set(`aboneyetkilisi.${message.guild.id}`, rol.id)
   message.channel.send(`Abone yetkilisi başarıyla ${rol} olarak ayarlandı.`)
 }
-
+ //komutu alıp asıl botunuza atabilirsiniz
 exports.conf = {
   enabled: true,
   guildOnly: false,

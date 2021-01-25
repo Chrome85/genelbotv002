@@ -1,44 +1,38 @@
-const db = require("quick.db");
-const Discord = require("discord.js");
-const ayarlar = require('../ayarlar.json')
-let prefix = ayarlar.prefix
+ const Discord = require('discord.js')
+const ayarlar = require('../ayarlar.json');
+const fs = require('fs');
+const db = require("quick.db")
+exports.run = async (bot , message, args) => {
 
-exports.run = function(client, message, args) {
-     if (!message.guild) {
-    const ozelmesajuyari = new Discord.MessageEmbed()
-    .setColor(0xFF0000)
-    .setTimestamp()
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
-    return message.author.send(ozelmesajuyari); }
+  let reason = args.slice(0).join(' ') 
+  if(!reason) return message.reply("Sebeb Belirt.")
+      setTimeout(function(){
+
+  db.set(`afk_${message.author.id}, ${message.guild.id}`, reason)
   
-  var USER = message.author;
-  var REASON = args.slice(0).join("  ");
-  const embedCrewCode = new Discord.MessageEmbed()
-  .setColor('RED')
-  .setAuthor(message.author.username, message.author.avatarURL)
-  .setDescription(`Afk Olmak İçin Bir Sebep Belirtin.\n\n Örnek Kullanım : ${prefix}afk <sebep>`)
-  if(!REASON) return message.channel.send(embedCrewCode)
- //Code by Manyak*#9999
-  db.set(`afk_${USER.id}`, REASON);
-  db.set(`afk_süre_${USER.id}`, Date.now());
-  const afk = new Discord.MessageEmbed()
-  .setColor('GREEN')
-  .setAuthor(message.author.username, message.author.avatarURL)
-  .setDescription(`Afk Moduna Başarıyla Girildi. Afk Olma Sebebi : **${REASON}**`)
-  message.channel.send(afk)
- 
-};
- 
+  db.set(`afk-zaman_${message.author.id}, ${message.guild.id}`, Date.now())
+      },500)
+const dcs = new Discord.MessageEmbed()
+.setTitle("<a:basarili:749532011483627541> Başarılı!")
+.setDescription("Başarıyla Afk Oldun!")
+.addField("Afk Nedeni;",`${reason}`)
+.setColor("RANDOM")
+.setThumbnail(message.author.avatarURL())
+.setTimestamp()
+.setFooter(message.guild.name, message.guild.iconURL())
+  message.channel.send(dcs)
+  if(!message.member.nickname) return message.member.setNickname("[AFK] " + message.member.user.username)
+  message.member.setNickname("[AFK] " + message.member.nickname).catch(err => console.log(err));
+  }
 exports.conf = {
   enabled: true,
-  guildOnly: true,
+  guildOnly: false,
   aliases: [],
   permLevel: 0
 };
- 
+
 exports.help = {
   name: 'afk',
-  description: 'afk komutu',
-  usage: 'afk'
+  description: 'Afk Olursunuz.',
+  usage: '<prefix>afk'
 };

@@ -8,7 +8,7 @@ exports.run = (client, message) => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
     return message.author.send(ozelmesajuyari); }
-const EmbedCrewCode = new Discord.MessageEmbed()
+const NARCOSEMBED = new Discord.MessageEmbed()
 
 .setColor("RANDOM")
 .setTitle("**  » CAPTAN Bot  **")
@@ -19,21 +19,18 @@ const EmbedCrewCode = new Discord.MessageEmbed()
 Bir komut hakkında detaylı __yardım için__: **-yardım**
 
 **• Komutlar**
-> [-normal](https://discord.gg/qzHTkhjQgT) → normal gifler.
 > [-NSFW](https://discord.gg/qzHTkhjQgT) → NSFW gifler.
+> -Woman → Kadın gif xd
+> -Man → erkek gif xd
+> -Baby → bebek gif xd
+> -gifara → gif ararsınız
 > [-hayvan](https://discord.gg/qzHTkhjQgT) → Hayvan gifleri.
 > [-kemalsunal](https://discord.gg/qzHTkhjQgT) → **Kemal Sunal** gifleri.
 
-**• Bilgilendirme**
-
-> :bulb: **Discord Js Sürümü : 12.5.0**
-> :robot: **Yapımcım : Manyak*#9999**
-> :eye_in_speech_bubble: **Sürümüm : 2.0.1**
-© 2020 Captan | Tüm hakları saklıdır.
 `)
  
 
-return message.channel.send(EmbedCrewCode)
+return message.channel.send(NARCOSEMBED)
 .then; 
 
 };

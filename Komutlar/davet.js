@@ -8,7 +8,7 @@ exports.run = (client, message) => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
     return message.author.send(ozelmesajuyari); }
-const EmbedCrewCode = new Discord.MessageEmbed()
+const NARCOSEMBED = new Discord.MessageEmbed()
 
 .setColor("PİNK")
 .setTitle("**•Davet**")
@@ -26,7 +26,7 @@ Sunucuna eklemek istiyorsan [buraya tıklayarak](https://discord.com/oauth2/auth
 `)
  
 
-return message.channel.send(EmbedCrewCode)
+return message.channel.send(NARCOSEMBED)
 .then; 
 
 };

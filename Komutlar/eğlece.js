@@ -8,7 +8,7 @@ exports.run = (client, message) => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
     return message.author.send(ozelmesajuyari); }
-const EmbedCrewCode = new Discord.MessageEmbed()
+const NARCOSEMBED = new Discord.MessageEmbed()
 
 .setColor("RANDOM")
 .setTitle("**  » CAPTAN Bot  **")
@@ -16,38 +16,38 @@ const EmbedCrewCode = new Discord.MessageEmbed()
 .setDescription(`
 **» Bağlantılar** 
 **[Destek Sunucusu](https://discord.gg/qzHTkhjQgT)** **•** **[Botun Davet Linki](https://discord.com/api/oauth2/authorize?client_id=779006421625995345&permissions=2146958847&scope=bot)** **•** **[Web-Site]()**
-Bir komut hakkında detaylı __yardım için__: **-yardım**
+Bir komut hakkında detaylı __yardım için__: **-yardım**`)
 
-**• Komutlar**
-> [-zarat](https://discord.gg/qzHTkhjQgT) →  Zar atarsınız
-> [-kasaaç](https://discord.gg/qzHTkhjQgT) → CsGo kasası açmaya ne dersin?.
-> [-emojiyazı](https://discord.gg/qzHTkhjQgT) → Emojili yazı yazmaya ne dersin?.
-> [-espiri](https://discord.gg/qzHTkhjQgT) → Bot espiri yapar.
-> [-sor](https://discord.gg/qzHTkhjQgT) → Bot sorduğunuz soruya cevap verir.
-> [-vine](https://discord.gg/qzHTkhjQgT) → Bot size komik paylaşımlar gösterir.
-> [-adamasmaca](https://discord.gg/qzHTkhjQgT) → Adam asmaca oyunu.
-> [-balıktut](https://discord.gg/qzHTkhjQgT) → Dereden balık tutarsınız.
-> [-tersyazı](https://discord.gg/qzHTkhjQgT) →  Yazdığınız yazıyı bot tersten yazar
-> [-mcskin](https://discord.gg/qzHTkhjQgT) →Yazdığınız ismin minecraft görünüşünü atar.
-> [-token](https://discord.gg/qzHTkhjQgT) →  Botun tokenini gösterir.
-> [-düello](https://discord.gg/qzHTkhjQgT) →  Arkadaşlarınızla düello yaparsınız.
-> [-wasted](https://discord.gg/qzHTkhjQgT) → Polis tarafından yakalanırsnız
-> [-yumruk-at](https://discord.gg/qzHTkhjQgT) → Etiketlediğin kişiye bot yumruk atar.
-> [-yazan-kazanır](https://discord.gg/qzHTkhjQgT) → Yazan kazanır oyunu.
-> [-kapaklaf](https://discord.gg/qzHTkhjQgT) → Etiketlediğin kişiye bot kapaklaf söyler.
-> [-şanslısayım](https://discord.gg/qzHTkhjQgT) → Şanslı sayını bulmaya calışır.
-> [-kaçcm](https://discord.gg/qzHTkhjQgT) → Malafatını ölçer.
-
-**• Bilgilendirme**
-> :bulb: **Discord Js Sürümü : 12.5.0**
-> :robot: **Yapımcım : Manyak*#9999**
-> :eye_in_speech_bubble: **Sürümüm : 2.0.1**
-© 2020 Captan | Tüm hakları saklıdır.
-`)
- 
- 
-
-return message.channel.send(EmbedCrewCode)
+.addField('**• Komutlar**')
+.addField('> -zarat ',' Zar atarsınız')
+.addField('> -kasaaç ',' → CsGo kasası açmaya ne dersin?.')
+.addField('> -emojiyazı ',' → Emojili yazı yazmaya ne dersin?.')
+.addField('> -espiri','  → Bot espiri yapar.')
+.addField('> -sor ',' → Bot sorduğunuz soruya cevap verir.')
+.addField('> -vine','  → Bot size komik paylaşımlar gösterir.')
+.addField('> -adamasmaca ',' → Adam asmaca oyunu.')
+.addField('> -balıktut','  → Dereden balık tutarsınız.')
+.addField('> -tersyazı','  →  Yazdığınız yazıyı bot tersten yazar')
+.addField('> -mcskin',' →Yazdığınız ismin minecraft görünüşünü atar.')
+.addField('> -token ',' →  Botun tokenini gösterir.')
+.addField('> -düello','  →  Arkadaşlarınızla düello yaparsınız.')
+.addField('> -wasted','  → Polis tarafından yakalanırsnız')
+.addField('> -yumruk-at','  → Etiketlediğin kişiye bot yumruk atar.')
+.addField('> -yazan-kazanır','  → Yazan kazanır oyunu.')
+.addField('>-kapaklaf','  → Etiketlediğin kişiye bot kapaklaf söyler.')
+.addField('> -şanslısayım( ',' → Şanslı sayını bulmaya calışır.')
+.addField('> -kaçcm ',' → Malafatını ölçer.')
+.addField('> » -adamol ',' → adam olursun')
+.addField('> -ağla ',' → Ağlarsınız')
+.addField('> -atatürk ',' → Atatürkün fotoğrafını atar')
+.addField('> -hapishane','  → Hapishane işte qwe')
+.addField('> -havadurumu ',' → Hava durumunu gösterir')
+.addField('> -hediye-ver ',' → Hediye verir ')
+.addField('> -ilginçbilgi ',' → İlginç bilgiler işte kanka')
+.addField('-intihar-et','→ İntihar edersiniz')
+.addField('-kahve','→ Kahve içersiniz ab')
+.addField('-renkara','→ Renk ararsınız')
+return message.channel.send(NARCOSEMBED)
 .then; 
 
 };

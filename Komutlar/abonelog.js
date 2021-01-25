@@ -1,6 +1,6 @@
 let database = require("wio.db")
 let ayarlar = require("../ayarlar.json")
-
+ //komutu alıp asıl botunuza atabilirsiniz
 
 
 exports.run = async(client, message) => {
