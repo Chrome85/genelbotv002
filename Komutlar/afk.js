@@ -1,7 +1,7 @@
  const Discord = require('discord.js')
 const ayarlar = require('../ayarlar.json');
 const fs = require('fs');
-const db = require("quick.db")
+const db = require("nrc.db")
 exports.run = async (bot , message, args) => {
 
   let reason = args.slice(0).join(' ') 

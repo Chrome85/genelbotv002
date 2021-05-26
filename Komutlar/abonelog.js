@@ -1,4 +1,4 @@
-let database = require("wio.db")
+let database = require("nrc.db")
 let ayarlar = require("../ayarlar.json")
  //komutu alıp asıl botunuza atabilirsiniz
 
