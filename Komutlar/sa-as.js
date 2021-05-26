@@ -1,4 +1,4 @@
-const db = require('quick.db')
+const db = require('nrc.db')
 const Discord = require('discord.js')
  
  

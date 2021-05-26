@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const db = require("wio.db")
+const db = require("nrc.db")
 exports.run = async (client, message, args) => {
   try {
   let user;
