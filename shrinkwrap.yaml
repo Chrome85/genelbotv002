@@ -16,7 +16,7 @@ dependencies:
   moment-duration-format: 2.3.2
   node-superfetch: 0.1.10
   parse-ms: 2.1.0
-  quick.db: 7.1.3
+  nrc.db: 7.1.3
   request: 2.88.2
   snekfetch: 4.0.4
   superagent: 6.1.0
@@ -2188,7 +2188,7 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
-  /quick.db/7.1.3:
+  /nrc.db/7.1.3:
     dependencies:
       better-sqlite3: 7.1.1
       lodash: 4.17.20
@@ -2877,7 +2877,7 @@ specifiers:
   moment-duration-format: ^2.3.2
   node-superfetch: ^0.1.10
   parse-ms: ^2.1.0
-  quick.db: ^7.1.2
+  nrc.db^7.1.2
   request: ^2.88.2
   snekfetch: ^4.0.4
   superagent: ^6.1.0
